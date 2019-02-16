@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="atletismo">
+  <ClassDiagramComponents>
+    <Class name="Aspirante" package="" visibility="public" xPosition="54.0" yPosition="209.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="GestorInscripcion" package="" visibility="public" xPosition="54.0" yPosition="56.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="EntidadEducativa" package="" visibility="public" xPosition="54.0" yPosition="355.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Diciplina" package="" visibility="public" xPosition="386.0" yPosition="56.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Categoria" package="" visibility="public" xPosition="386.0" yPosition="230.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Inscripcion" package="" visibility="public" xPosition="359.0" yPosition="428.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
