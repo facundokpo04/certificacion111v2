@@ -12,6 +12,9 @@ public class Categoria {
 
     private String sexo;
 
+    public Categoria() {
+    }
+
     public Categoria(String nombre, Integer edadMinima, Integer edadMaxima, String sexo) {
         this.nombre = nombre;
         this.edadMinima = edadMinima;

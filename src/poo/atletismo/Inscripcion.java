@@ -11,6 +11,9 @@ public class Inscripcion {
     private Competencia competencia;
     private Categoria categoria;
 
+    public Inscripcion() {
+    }
+
     public Inscripcion(Date fecha) {
         this.fecha = fecha;
     }

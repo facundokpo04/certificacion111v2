@@ -28,6 +28,9 @@ public class Aspirante {
     
     private Escuela unaEscuela;
 
+    public Aspirante() {
+    }
+
     public Aspirante(String apellido, String direccion, String sexo, String dni, Date fechaNac, Escuela unaEscuela) {
         this.apellido = apellido;
         this.direccion = direccion;

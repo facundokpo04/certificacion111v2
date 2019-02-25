@@ -8,6 +8,9 @@ public class Disciplina {
 
     private String descripcion;
 
+    public Disciplina() {
+    }
+
     public Disciplina(String nombre, String descripcion) {
         this.nombre = nombre;
         this.descripcion = descripcion;
