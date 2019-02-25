@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="poo.atletismo.Escuela" table="Escuela" >
+        <id name="id" column="id_escuela" type="int">
+            <generator class="increment" />
+        </id>
+        <property name="nombre"/>
+        <list name="aspirantes" cascade="all"> 
+            <key>
+                <column name="idescuela"  />
+            </key>  
+            <list-index>
+                <column name="Idx" />
+            </list-index>   
+            <one-to-many class="poo.atletismo.Aspirante" /> 
+        </list>         
+    </class>
+</hibernate-mapping>

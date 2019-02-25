@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="poo.atletismo.Aspirante" table="Aspirante" >
+        <id name="id" column="id_aspirante" type="int">
+            <generator class="increment" />
+        </id>
+        <property name="nombres"/>
+        <property name="apellido"/> 
+        <property name="direccion"/> 
+        <property name="sexo"/> 
+        <property name="dni"/> 
+        <property name="fechaNac" column="fecha_nacimiento" type="java.util.Date" />
+        <many-to-one name="unaEscuela" class="poo.atletismo.Escuela" column="id_escuela"></many-to-one>   
+        
+                         
+    </class>
+</hibernate-mapping>

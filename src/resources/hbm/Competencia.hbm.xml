@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="poo.atletismo.Competencia" table="Competencia" >
+        <id name="id" column="id_competencia" type="int">
+            <generator class="increment" />
+        </id>
+        <property name="nombrecon"  column="nombre_competencia"/>
+        <property name="fecha" column="fecha_competencia" type="java.util.Date" />
+        <many-to-one name="disciplina" class="poo.atletismo.Disciplina" column="id_disciplina"></many-to-one>   
+        <list name="categorias" cascade="all"> 
+            <key>
+                <column name="idcompetencia"  />
+            </key>  
+            <list-index>
+                <column name="Idx" />
+            </list-index>   
+            <one-to-many class="poo.atletismo.Competencia" /> 
+        </list>       
+    </class>
+</hibernate-mapping>

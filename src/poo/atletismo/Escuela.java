@@ -14,9 +14,6 @@ public class Escuela {
         this.aspirantes = new ArrayList();
     }
     
-    
-    
-
     public Escuela(String nombre) {
         this.nombre = nombre;
     }
