@@ -9,13 +9,14 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import poo.atletismo.Escuela;
+import poo.atletismo.Inscripcion;
 
 /**
  *
  * @author fdominguez
  */
-public class InscripcionDaoHibernateImpl implements EscuelaDao{
-     
+public class InscripcionDaoHibernateImpl implements InscripcionDao {
+
     private final SessionFactory sessionFactory;
 
     public InscripcionDaoHibernateImpl(SessionFactory sessionFactory) {
@@ -23,11 +24,12 @@ public class InscripcionDaoHibernateImpl implements EscuelaDao{
     }
 
     @Override
-    public List<Escuela> obtenerTodas() {
+    public void guardar(Inscripcion inscripcion) {
         Session session = sessionFactory.openSession();
-        List<Escuela> retorno = session.createQuery("from Escuela").list();
+        session.beginTransaction();
+        session.save(inscripcion);
+        session.getTransaction().commit();
         session.close();
-        
-        return retorno;
     }
+
 }

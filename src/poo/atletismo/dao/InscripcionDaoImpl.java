@@ -8,23 +8,28 @@ package poo.atletismo.dao;
 import java.util.ArrayList;
 import java.util.List;
 import poo.atletismo.Escuela;
+import poo.atletismo.Inscripcion;
 
 /**
  *
  * @author fdominguez
  */
-public class InscripcionDaoImpl implements EscuelaDao{
-       private final List<Escuela> escuelas;
+public class InscripcionDaoImpl implements InscripcionDao{
+   private final List<Inscripcion> inscripciones;
 
     public InscripcionDaoImpl() {
-        this.escuelas = new ArrayList<>();
-        this.escuelas.add(new Escuela("Lucio Lucero"));
-        this.escuelas.add(new Escuela("Bop 789"));
-        this.escuelas.add(new Escuela("Colegio Americano"));
+        this.inscripciones = new ArrayList<>();
+   
     }
 
     @Override
-    public List<Escuela> obtenerTodas() {
-        return escuelas;
+    public void guardar(Inscripcion inscripcion) {
+          this.inscripciones.add(inscripcion);
+        
+        System.out.println("Inscripcion agregada: " + inscripcion);
     }
+
+   
+
+  
 }

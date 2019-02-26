@@ -6,7 +6,7 @@
 package poo.atletismo.dao;
 
 import java.util.List;
-import poo.atletismo.Escuela;
+import poo.atletismo.Inscripcion;
 
 /**
  *
@@ -14,5 +14,5 @@ import poo.atletismo.Escuela;
  */
 public interface InscripcionDao {
     
-     public List<Escuela> obtenerTodas ();
+   public void guardar (Inscripcion inscripcion);
 }

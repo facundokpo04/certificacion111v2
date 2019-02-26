@@ -29,10 +29,27 @@ public class Aspirante {
 
     private Escuela unaEscuela;
 
+    /**
+     * Constructor por Defecto
+     */
     public Aspirante() {
     }
 
-    public Aspirante(String apellido, String direccion, String sexo, String dni, Date fechaNac, Escuela unaEscuela) {
+    /**
+     * Este constructor incluye todos los atributos del Aspirante
+     *
+     * @param nombres
+     * @param apellido
+     * @param direccion
+     * @param sexo
+     * @param dni
+     * @param fechaNac
+     * @param escuela
+     */
+
+    public Aspirante(String nombres, String apellido, String direccion, String sexo, String dni, Date fechaNac, Escuela unaEscuela) {
+
+        this.nombres = nombres;
         this.apellido = apellido;
         this.direccion = direccion;
         this.sexo = sexo;
@@ -104,5 +121,9 @@ public class Aspirante {
     public void setUnaEscuela(Escuela unaEscuela) {
         this.unaEscuela = unaEscuela;
     }
-
+  @Override
+    public String toString() {
+        return this.nombres + " "+ this.apellido;
+    }
+    
 }

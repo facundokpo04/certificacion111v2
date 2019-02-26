@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="poo.atletismo.Inscripcion" table="Inscripcion" >
-        <id name="numero" column="id_competencia" type="int">
+        <id name="numero" column="id_inscripcion" type="int">
             <generator class="increment" />
         </id>
         <property name="estado"/>

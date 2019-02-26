@@ -16,5 +16,6 @@
     <mapping resource="resources/hbm/Disciplina.hbm.xml"/>
     <mapping resource="resources/hbm/Escuela.hbm.xml"/>
     <mapping resource="resources/hbm/Competencia.hbm.xml"/>
+    <mapping resource="resources/hbm/Inscripcion.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

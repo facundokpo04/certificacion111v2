@@ -61,5 +61,8 @@ public class Categoria {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-
+ @Override
+    public String toString() {
+        return this.nombre;
+    }
 }
