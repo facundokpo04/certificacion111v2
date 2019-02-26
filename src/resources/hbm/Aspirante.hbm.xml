@@ -11,8 +11,6 @@
         <property name="sexo"/> 
         <property name="dni"/> 
         <property name="fechaNac" column="fecha_nacimiento" type="java.util.Date" />
-        <many-to-one name="unaEscuela" class="poo.atletismo.Escuela" column="id_escuela"></many-to-one>   
-        
-                         
+        <many-to-one name="unaEscuela" class="poo.atletismo.Escuela" column="id_escuela"></many-to-one>                                    
     </class>
 </hibernate-mapping>

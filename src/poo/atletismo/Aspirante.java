@@ -12,8 +12,9 @@ import java.util.Date;
  * @author fdominguez
  */
 public class Aspirante {
+
     private String id;
-    
+
     private String nombres;
 
     private String apellido;
@@ -25,7 +26,7 @@ public class Aspirante {
     private String dni;
 
     private Date fechaNac;
-    
+
     private Escuela unaEscuela;
 
     public Aspirante() {
@@ -48,12 +49,6 @@ public class Aspirante {
         this.id = id;
     }
 
-    
-    
-    
-    
-    
-    
     public String getNombres() {
         return nombres;
     }
@@ -109,6 +104,5 @@ public class Aspirante {
     public void setUnaEscuela(Escuela unaEscuela) {
         this.unaEscuela = unaEscuela;
     }
-    
-    
+
 }

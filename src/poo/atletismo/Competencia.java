@@ -7,7 +7,7 @@ import java.util.List;
 public class Competencia {
 
     private Integer id;
-    private String nombrecon;
+    private String nombre;
 
     private Date fecha;
     private Disciplina disciplina;
@@ -18,7 +18,7 @@ public class Competencia {
     }
 
     public Competencia(String nombre, Date fecha, Disciplina disciplina, List<Categoria> categorias) {
-        this.nombrecon = nombre;
+        this.nombre = nombre;
         this.fecha = fecha;
         this.disciplina = disciplina;
         this.categorias = categorias;
@@ -33,11 +33,11 @@ public class Competencia {
     }
 
     public String getNombre() {
-        return nombrecon;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombrecon = nombre;
+        this.nombre = nombre;
     }
 
     public Date getFecha() {
@@ -63,9 +63,6 @@ public class Competencia {
     public void setCategorias(List<Categoria> categorias) {
         this.categorias = categorias;
     }
-    
-    
-    
-    
 
+    
 }

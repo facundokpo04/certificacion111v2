@@ -73,7 +73,5 @@ public class Inscripcion {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
-    }
-    
-
+    }    
 }

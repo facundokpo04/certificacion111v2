@@ -5,7 +5,7 @@
         <id name="id" column="id_competencia" type="int">
             <generator class="increment" />
         </id>
-        <property name="nombrecon"  column="nombre_competencia"/>
+        <property name="nombre"  column="nombre_competencia"/>
         <property name="fecha" column="fecha_competencia" type="java.util.Date" />
         <many-to-one name="disciplina" class="poo.atletismo.Disciplina" column="id_disciplina"></many-to-one>   
         <list name="categorias" cascade="all"> 
@@ -15,7 +15,7 @@
             <list-index>
                 <column name="Idx" />
             </list-index>   
-            <one-to-many class="poo.atletismo.Competencia" /> 
+            <one-to-many class="poo.atletismo.Categoria" /> 
         </list>       
     </class>
 </hibernate-mapping>

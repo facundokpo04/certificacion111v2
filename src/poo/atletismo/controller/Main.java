@@ -26,7 +26,8 @@ public class Main {
 			.configure("resources/hibernate.cfg.xml") // configures settings from hibernate.cfg.xml
 			.build();
 	try {
-            sessionFactory = new MetadataSources( registry ).buildMetadata().buildSessionFactory();
+            sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+            new GestorInscripcion(sessionFactory).run();
 	}
 	catch (Exception e) {
             System.out.println("Error al crear factory: " + e.getMessage());
@@ -36,7 +37,7 @@ public class Main {
             StandardServiceRegistryBuilder.destroy( registry );
 	}
         
-        new GestorInscripcion(sessionFactory).run();
+        
     }
     }
     

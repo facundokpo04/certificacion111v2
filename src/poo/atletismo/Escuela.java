@@ -34,7 +34,13 @@ public class Escuela {
         this.nombre = nombre;
     }
 
-    public List getAspirantes() {
-        return this.aspirantes;
+    public List<Aspirante> getAspirantes() {
+        return aspirantes;
     }
+
+    public void setAspirantes(List<Aspirante> aspirantes) {
+        this.aspirantes = aspirantes;
+    }
+
+   
 }

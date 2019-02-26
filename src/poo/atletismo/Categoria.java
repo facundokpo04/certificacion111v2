@@ -3,7 +3,7 @@ package poo.atletismo;
 public class Categoria {
 
     private Integer id;
-    
+
     private String nombre;
 
     private Integer edadMinima;
