@@ -5,6 +5,7 @@
  */
 package poo.atletismo.ui;
 
+import java.util.Iterator;
 import java.util.List;
 import javax.swing.DefaultListModel;
 import poo.atletismo.Competencia;
@@ -17,7 +18,7 @@ import poo.atletismo.controller.GestorInscripcion;
  * @author fdominguez
  */
 public class PantallaAdministracionInscripcion extends javax.swing.JFrame {
-
+    
     private final List<Escuela> escuelas;
     private final List<Competencia> competencias;
     private final GestorInscripcion gestor;
@@ -25,7 +26,7 @@ public class PantallaAdministracionInscripcion extends javax.swing.JFrame {
     private DefaultListModel listModelCompetencia;
     private DefaultListModel listModelCategoria;
     private DefaultListModel listModelAspirante;
-
+    
     public PantallaAdministracionInscripcion(List<Escuela> escuelas, List<Competencia> competencias, GestorInscripcion gestor) {
         this.escuelas = escuelas;
         this.competencias = competencias;
@@ -34,8 +35,8 @@ public class PantallaAdministracionInscripcion extends javax.swing.JFrame {
         listModelCompetencia = new DefaultListModel();
         listModelCategoria = new DefaultListModel();
         listModelAspirante = new DefaultListModel();
-        listModelEscuela.copyInto(escuelas.toArray());
-        listModelCompetencia.copyInto(competencias.toArray());       
+        this.cargarModeloEscuelaLista();
+        this.cargarModeloCompLista();
         
         initComponents();
         
@@ -43,6 +44,25 @@ public class PantallaAdministracionInscripcion extends javax.swing.JFrame {
         this.jListCompetencias.setModel(listModelCompetencia);
         this.jListCategorias.setModel(listModelCategoria);
         this.jListAspirante.setModel(listModelAspirante);
+        
+    }
+    
+        
+    public void cargarModeloCompLista() {
+        Iterator<Competencia> iter = this.competencias.iterator();        
+        while (iter.hasNext()) {
+            Competencia actual = iter.next();
+            this.listModelCompetencia.addElement(actual);           
+        }
+        
+    }
+    
+    public void cargarModeloEscuelaLista() {
+        Iterator<Escuela> iter = this.escuelas.iterator();        
+        while (iter.hasNext()) {
+            Escuela actual = iter.next();
+            this.listModelEscuela.addElement(actual);           
+        }
         
     }
 
