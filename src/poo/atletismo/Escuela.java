@@ -41,6 +41,9 @@ public class Escuela {
     public void setAspirantes(List<Aspirante> aspirantes) {
         this.aspirantes = aspirantes;
     }
-
+ @Override
+    public String toString() {
+        return this.nombre;
+    }
    
 }

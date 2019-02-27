@@ -11,8 +11,10 @@ import poo.atletismo.Escuela;
 import poo.atletismo.Inscripcion;
 import poo.atletismo.dao.CompetenciaDao;
 import poo.atletismo.dao.CompetenciaDaoHibernateImpl;
+import poo.atletismo.dao.CompetenciaDaoImpl;
 import poo.atletismo.dao.EscuelaDao;
 import poo.atletismo.dao.EscuelasDaoHibernateImpl;
+import poo.atletismo.dao.EscuelasDaoImpl;
 import poo.atletismo.dao.InscripcionDao;
 import poo.atletismo.dao.InscripcionDaoHibernateImpl;
 import poo.atletismo.ui.PantallaAdministracionInscripcion;
@@ -29,8 +31,8 @@ public class GestorInscripcion {
         // creamos el torneo
 
         // creamos las instancias de los objetos de acceso a datos
-        this.competenciaDao = new CompetenciaDaoHibernateImpl(sessionFactory);
-        this.escuelaDao = new EscuelasDaoHibernateImpl(sessionFactory);
+        this.competenciaDao = new CompetenciaDaoImpl();
+        this.escuelaDao = new EscuelasDaoImpl();
         this.inscripcionDao = new InscripcionDaoHibernateImpl(sessionFactory);
     }
 

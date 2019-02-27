@@ -6,8 +6,10 @@
 package poo.atletismo.ui;
 
 import java.util.List;
+import javax.swing.DefaultListModel;
 import poo.atletismo.Competencia;
 import poo.atletismo.Escuela;
+import javax.swing.JList;
 import poo.atletismo.controller.GestorInscripcion;
 
 /**
@@ -18,14 +20,30 @@ public class PantallaAdministracionInscripcion extends javax.swing.JFrame {
 
     private final List<Escuela> escuelas;
     private final List<Competencia> competencias;
-
     private final GestorInscripcion gestor;
+    private DefaultListModel listModelEscuela;
+    private DefaultListModel listModelCompetencia;
+    private DefaultListModel listModelCategoria;
+    private DefaultListModel listModelAspirante;
 
     public PantallaAdministracionInscripcion(List<Escuela> escuelas, List<Competencia> competencias, GestorInscripcion gestor) {
         this.escuelas = escuelas;
         this.competencias = competencias;
         this.gestor = gestor;
+        listModelEscuela = new DefaultListModel();
+        listModelCompetencia = new DefaultListModel();
+        listModelCategoria = new DefaultListModel();
+        listModelAspirante = new DefaultListModel();
+        listModelEscuela.copyInto(escuelas.toArray());
+        listModelCompetencia.copyInto(competencias.toArray());       
+        
         initComponents();
+        
+        this.jListEntidades.setModel(listModelEscuela);
+        this.jListCompetencias.setModel(listModelCompetencia);
+        this.jListCategorias.setModel(listModelCategoria);
+        this.jListAspirante.setModel(listModelAspirante);
+        
     }
 
     /**
@@ -96,9 +114,10 @@ public class PantallaAdministracionInscripcion extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButtonNuevoAspirante)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 20, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -112,11 +131,6 @@ public class PantallaAdministracionInscripcion extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Competencias"));
 
-        jListCompetencias.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane3.setViewportView(jListCompetencias);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -137,11 +151,6 @@ public class PantallaAdministracionInscripcion extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Entidades Educativas"));
 
-        jListEntidades.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane1.setViewportView(jListEntidades);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
