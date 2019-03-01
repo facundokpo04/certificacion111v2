@@ -171,6 +171,11 @@ public class PantallaAdministracionInscripcion extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Entidades Educativas"));
 
+        jListEntidades.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jListEntidadesMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jListEntidades);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -237,6 +242,10 @@ public class PantallaAdministracionInscripcion extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jListEntidadesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListEntidadesMouseClicked
+       
+    }//GEN-LAST:event_jListEntidadesMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
